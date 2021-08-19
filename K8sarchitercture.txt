@@ -1,0 +1,27 @@
+What is a Master and a Slave?
+How does a Kubernetes cluster can be self-healed?
+
+
+Lets Go:
+    A running Node in order to run pods it has 3 main components that need to be installed:
+        -Container Runtime
+        -Kubelet:
+            Kubelet interacts with both the container and the node
+            Kubelet is responsible to start the pod with a container inside
+        -Kube Proxy:
+            Kube Proxy forwards the requests received from the Service
+
+How do you interact with this cluster?
+    How to:
+        Schedule pod
+        Monitor
+        re-schedule/restart pod
+        join a new Node
+    
+                                --> MASTER Nodes
+    
+Master Nodes:
+    Master nodes have 4 processes that run on EVERY master node:
+        
+
+        

@@ -54,6 +54,20 @@ Kubernetes Components:
         or remotely, outside the K8S cluster (cloud or onpremise storage).
         K8S does not manage data persistance!
     
+    Deployment:
+       Blueprints for pods:
+            Create a blueprint that would include the specs, requirements and dependencies of pods and would allow to autodeploy them
+            when necessary.
+        You create Deoployments that would allow you to define how many replicas of a pod would run.
+        At practice instead of working with pods, we would work with Deployments.
+        DB cant be replicated via Deployment.
+    
+    StatefulSet:
+        This component is used for DB pods in order for the storage were our current state data are written to be written ONLY by the
+        working DB pod.
+        Its only used from Stateful Apps -> mongodb, mysql etc.
+        Since the above can be tricky, a common practise is to host the DB outside of K8S cluster.
+        
 
 
 
