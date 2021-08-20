@@ -22,6 +22,25 @@ How do you interact with this cluster?
     
 Master Nodes:
     Master nodes have 4 processes that run on EVERY master node:
+        -Api Server
+            like cluster gateway
+            acts as a gatekeeper for authentication
+            Request->API Server->validates request->other processes->creation of pod or interaction with pod
+        -Scheduler
+            Schedule new Pod->API Server->Scheduler->Where to put the Pod? (will decide on which node the pod will run)->Kubelet
+        -Controller Manager
+            Detects cluster state changes
+            Controller Manager->Scheduler->Kubelet->Pod
+        -etcd
+            etcd is the cluser brain
+            Cluster changes get stored in the key value store (when a pod dies or is created)
+        
+        Example: How does a scheduler know what resources are available on the nodes?
+                 How does a controller manager detects that a cluster state changed?
+                 A query request is run through Api Server to check if the cluster is healthy?
+                 All of the above information is stored in etcd
+        
+        Application data is not stored in etcd though.
         
 
         
