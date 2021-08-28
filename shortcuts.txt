@@ -1,0 +1,12 @@
+In this file there are all the shortcuts that I am going to use for my journey with K8s.
+As I move forward I am sure that more shortcuts will be included so keep an eye:)
+The list is:
+    kubectl shortcut:
+    Set-Alias -Name "kl" -Value kubectl
+
+    kubectl get pods shortcut: 
+    function GetPods([string]$namespace=”default”)
+    {
+     kubectl get pods -n $namespace
+    }
+    Set-Alias -Name kgp -Value GetPods
