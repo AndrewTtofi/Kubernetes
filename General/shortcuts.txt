@@ -10,3 +10,17 @@ The list is:
      kubectl get pods -n $namespace
     }
     Set-Alias -Name kgp -Value GetPods
+
+    kubectl get nodes:
+    function GetNodes
+    {
+        kubectl get nodes
+    }
+    Set-Alias -Name kgn -Value GetNodes
+
+    kubectl get services:
+    function GetServices
+    {
+        kubectl get services
+    }
+    Set-Alias -Name kgs -Value GetServices
