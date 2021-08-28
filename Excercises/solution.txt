@@ -1,0 +1,39 @@
+Please view the Shortcut file to be able to view the shortcuts that I am using.
+Exercises:
+    Capter 1 -> Core Conecpts:
+        Q1) Create a namespace called "mynamespace" and a pod nginx on this namespace
+        A1) kl create namespace mynamespace
+            kl create deploy nginx --image=nginx --namespace=mynamespace
+        
+        Q2) Create the pod that was just described using YAML
+        A2) kl create deploy nginx --image=nginx --namespace=mynamespace -o yaml > pod.yaml
+            My answer was not correct because:
+                1. By creating the deployment you cannot run the code of pod on a yaml because you are actually creating the
+                   blueprint
+                2. Not sure but need to investigate you need to --dry-run=client in order to transfer the data to the yaml
+
+            Correct answer:
+                kubectl run nginx --image=nginx --restart=Never --dry-run=client -n mynamespace -o yaml > pod.yaml
+
+        Q3) Create a busybox pod (using kubectl command) that runs the command "env". Run it and see the output
+        A3) kl run busybox --image=busybox --command -- env
+            I forgot to actually print he the outcome from the pod (did not even think of printing the logs)
+
+            Correct Answer:
+                kl run busybox --image=busybox --command -- env
+                kl logs busybox
+        
+        Q4) Create a busybox pod (using YAML) that runs the command "env". Run it and see the output
+        A4) Similar to Q2 but now I know the answer
+            kl run busybox --image=busybox --restart=Never --dry-run=client -o yaml > podbusybox.yaml
+            type podbusybox.yaml
+        
+        Q5) Get the YAML for a new namespace called 'myns' without creating it
+        A5)  kl create ns myns -o yaml > namespace.yaml but it did run and create the namespace
+             This is were --dry-run=client comes in order to NOT run and just create the yaml file.
+             
+             Correct Answer:   
+             kl create ns myns -o yaml --dry-run=client > namespace.yaml
+        
+        Q6) Get the YAML for a new ResourceQuota called 'myrq' with hard limits of 1 CPU, 1G memory and 2 pods without creating it
+        A6) Cannot Answer it YET. Back to reading.
