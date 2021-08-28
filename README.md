@@ -5,3 +5,9 @@ I will upload my code and also every theory that I come across with.
 For the introduction on Kubernetes I will use the video below from Techworld with Nana:
 https://www.youtube.com/watch?v=X48VuDVv0do&t=9s&ab_channel=TechWorldwithNana
 Hopefully I will be up to speed in the following months in order to proceed with the certification CKAD.
+
+
+
+NOTE**
+Before you go through my material I would advise to have a look on the General folder.
+It contains information to help you understand the way I work and also what my material is all about.
