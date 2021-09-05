@@ -43,4 +43,11 @@ Master Nodes:
         Application data is not stored in etcd though.
         
 3 Parts of a configuration file:
-    
+    1) Metadata
+        Name, Labels etc.
+    2) Specification
+        Attributes of the Specification section are SPECIFIC to the kind of the file (Deployment, Service, etc)
+    3) Status
+        Automatically created from Kubernetes.
+        Compares the desired state and the Actual state. In case they do not match, Kubernetes will try to fix it.
+        This is part of the self healing process from Kubernetes.

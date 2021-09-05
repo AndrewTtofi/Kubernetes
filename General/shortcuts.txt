@@ -2,25 +2,25 @@ In this file there are all the shortcuts that I am going to use for my journey w
 As I move forward I am sure that more shortcuts will be included so keep an eye:)
 The list is:
     kubectl shortcut:
-    Set-Alias -Name "kl" -Value kubectl
+    New-Alias -Name "kl" -Value kubectl
 
     kubectl get pods shortcut: 
     function GetPods([string]$namespace=”default”)
     {
      kubectl get pods -n $namespace
     }
-    Set-Alias -Name kgp -Value GetPods
+    New-Alias -Name kgp -Value GetPods
 
     kubectl get nodes:
     function GetNodes
     {
         kubectl get nodes
     }
-    Set-Alias -Name kgn -Value GetNodes
+    New-Alias -Name kgn -Value GetNodes
 
     kubectl get services:
     function GetServices
     {
         kubectl get services
     }
-    Set-Alias -Name kgs -Value GetServices
+    New-Alias -Name kgs -Value GetServices
