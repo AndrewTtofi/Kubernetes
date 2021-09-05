@@ -42,5 +42,5 @@ Master Nodes:
         
         Application data is not stored in etcd though.
         
-
-        
+3 Parts of a configuration file:
+    

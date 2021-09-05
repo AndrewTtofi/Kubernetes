@@ -1,0 +1,17 @@
+CRUD commands:
+    Create Deployment:  kubectl create deployment [name]
+    Edit Deployment: kubectl edit deployment [name]
+    Delete Deployment: kubectl delete deployment [name]
+
+Status of different K8S components:
+    kubectl get nodes | services | replicaset | deployment
+
+Debugging pods:
+    Log to console: kubectl logs [pod name]
+    Get Interactive Terminal:   kubectl exec -it [pod name] -- bin/bash
+    Get info about pod: kubectl describe pod [pod name]
+
+Use configuration file for CRUD:
+    Apply a configuration file: kubectl apply -f [file name]
+    Delete with configuration file: kubectl delete -f [file name]
+
