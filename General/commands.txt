@@ -9,7 +9,14 @@ CRUD commands:
     Delete Pod: kubectl delete pod pod_name
     Edit Pod: kubectl edit pod pod_name (all of the configuration will come up and let us edit MOST of the attributes)
     Edit Pod (2): Alter the yaml file that created the pod then -> kubectl apply -f pod_name.yaml
+    Get more info for a Pod: kubectl get pod po_name -o wide
+    Describe a Pod: kubectl describe pod pod_name
     
+    Namespaces:
+    Create a Namespace: kubectl create ns namespace_name
+    Delete a Namespace: kubectl delete ns namespace_name
+    Add a Pod in a Namespace: in the pod yaml file -> Under metadata -> namespace: namespace_name
+    List Pods in a Namespace: kubectl get pods -n namespace_name pod_name
     
 Status of different K8S components:
     kubectl get nodes | services | replicaset | deployment
@@ -22,4 +29,6 @@ Debugging pods:
 Use configuration file for CRUD:
     Apply a configuration file: kubectl apply -f [file name]
     Delete with configuration file: kubectl delete -f [file name]
+
+
 
