@@ -1,8 +1,16 @@
 CRUD commands:
+    Deployments:
     Create Deployment:  kubectl create deployment [name]
     Edit Deployment: kubectl edit deployment [name]
     Delete Deployment: kubectl delete deployment [name]
 
+    Pods:
+    Create Pod: kubectl create pod pod_name.yml (Need to first create the actual yaml file)
+    Delete Pod: kubectl delete pod pod_name
+    Edit Pod: kubectl edit pod pod_name (all of the configuration will come up and let us edit MOST of the attributes)
+    Edit Pod (2): Alter the yaml file that created the pod then -> kubectl apply -f pod_name.yaml
+    
+    
 Status of different K8S components:
     kubectl get nodes | services | replicaset | deployment
 
