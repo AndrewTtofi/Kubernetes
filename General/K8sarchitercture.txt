@@ -51,3 +51,32 @@ Master Nodes:
         Automatically created from Kubernetes.
         Compares the desired state and the Actual state. In case they do not match, Kubernetes will try to fix it.
         This is part of the self healing process from Kubernetes.
+        
+What is Minikube and Kubectl? (Set up a Minikube cluster)
+    What is minikube?
+        In a production Cluster Setup we usually have at least 2 Master nodes and multiple worker nodes
+        So this happens on a VM.
+        How do you test it on a local machine?
+        What a minikube does is that it runs both Master and Worker processes on 1 node, on 1 machine.
+        One way to run it locally is through a virtual box.
+        So minikube will create a virtual box on the local pc and then run the Node in that Virtual Box.
+            So minikube is 1 Node K8s cluster that runs on 1 Node in a Virtual Box.
+            It can be used for testing of Kubernetes on my local setup.
+
+    What is kubectl?
+        API Process has 3 to be interacted with (hence with the cluster):
+            UI
+            API
+            CLI -> cli componment is the most powerful one and is also called kubectl
+
+Commands:
+    minikube start -> start a local Kubernetes cluster on the local machine (prerequisites: https://minikube.sigs.k8s.io/docs/start/)
+                      I find it a bit difficult to work on Windows so I switched to my Mac.
+
+    kubectl <command> -> this is the way I manage all of my K8s stuff.
+                        Commands:
+                            deployment (create, delete etc.)
+                            services (e.g replicaset)
+                            delete (deployment, pod)
+                            apply (conf file)
+                            get (e.g pods, nodes)
